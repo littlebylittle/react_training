@@ -1,0 +1,79 @@
+80% - react
+20 - others
+Но как я понял для энтерпрайза Александр топит за angular
+если без джява - то выгодно реакте
+--
+
+Topics to be covered:
+https://roadmap.sh/frontend т.е. что-то отсюда
+
+и что-то из роадмапа в реакте:
+https://roadmap.sh/react
+
+https://learn.javascript.ru/debugging-chrome debugging-chrome
+
+modules, export, import https://learn.javascript.ru/modules-intro
+
+IDE - vscode or something more useful?
+
+Objects, `this`, декораторы, замыкания, каррирование?
+
+babel
+data exchange through: <form>, websocets, ajax with BE, onsubmit etc
+Fetch API (without reload) XMLHttpRequest
+data exchange through websockets
+DOM manipulation
+json format: https://learn.javascript.ru/json
+css selectors (do we need them?)
+const, let, var etc
+
+webpack, Eslint, 
+
+
+--------------------------------------
+react
+plan from this course: 
+	https://learn.javascript.ru/screencast/react#react-environment
+	and this
+	https://ibaslogic.com/react-tutorial-for-beginners/
+	
+	To follow this course, we expect you to be familiar with the following topics:
+	HTML and CSS
+	JavaScript fundamentals like the object, arrays, conditionals, and so on
+	JavaScript ES6 features like the arrow functions, object destructuring, etc.
+	
+* https://github.com/facebook/create-react-app 
+* jsx
+* react components 
+* components lifecycle
+* props, state
+* state management: State Management https://www.techtarget.com/searchapparchitecture/definition/state-management
+			https://www.robinwieruch.de/react-state/
+* conditional rendering 
+* basic hooks: useState, useEffect something else (useReducer?)?
+	* redux?
+	* recoil
+	* mobX
+	* Context? (https://react.dev/learn/passing-data-deeply-with-context) 
+			https://www.robinwieruch.de/react-state-usereducer-usestate-usecontext/
+* virtual dom
+* debug 
+* data flow
+* npm install, build, test etc standard structure etc (npx?)
+* Api-calls:
+	react-query or SWR? (REST)
+	Graphql: https://www.apollographql.com/
+* react forms
+	* React hook form
+
+* react router
+* rxjs???
+
+
+Testing:
+Jest
+react-testing-library
+
+
+----------
+https://www.linkedin.com/learning/learning-react-js-5/ 
