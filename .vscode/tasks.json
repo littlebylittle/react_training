@@ -1,0 +1,16 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "npm",
+			"script": "start",
+			"path": "my-app",
+			"problemMatcher": [],
+			"label": "npm: start - my-app",
+			"detail": "react-scripts start",
+			"options": {
+				"cwd": "${workspaceFolder}/react_essential_training/Ch08/08_01/finished/react-app"
+			}
+		}
+	]
+}
