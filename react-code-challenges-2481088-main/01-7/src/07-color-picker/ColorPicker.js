@@ -20,12 +20,15 @@ const colors = [{
 
 export default function ColorPicker () {
   const [backgroundColor, setBackgroundColor] = useState('white')
+  //lifting state to child components
 
   return (
     <div className='page' style={{ backgroundColor }}>
       {
         colors.map(color => (
-          <Color key={color.hex} hex={color.hex} name={color.name} />
+          <Color key={color.hex} hex={color.hex} name={color.name} 
+          setBackgroundColor={setBackgroundColor}
+          />
         ))
       }
     </div>
