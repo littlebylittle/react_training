@@ -1,17 +1,33 @@
-import React from 'react'
+import { createContext, useContext, useState } from 'react'
+
+const ColorContext = createContext({
+  color: 'lightGrey',
+  setColor: () => {}
+})
 
 function ColorPicker () {
-  const colors = ['red', 'blue', 'yellow', 'green', 'black', 'white', 'purple']
+  const { setColor } = useContext(ColorContext)
+
+  const colors = ['red', 'blue', 'yellow', 'green', 'black', 'orange', 'white', 'purple']
   return (
     <div>
       <h1>Choose a color</h1>
-      {colors.map(color => <button key={color} style={{ backgroundColor: color }} />)}
+      {colors.map(color => (
+        <button
+          key={color}
+          style={{ backgroundColor: color, borderBlockColor: "black" }}
+          onClick={() => setColor(color)}
+        />))}
     </div>
   )
 }
 
+
 function Pixel () {
-  return <div style={{ height: '20px', width: '20px', backgroundColor: 'lightGrey', margin: '1px' }} />
+  const { color } = useContext(ColorContext)
+  const [pixelColor, setPixelColor] = useState('lightGrey')
+
+  return <button onClick={() => setPixelColor(color)} style={{ height: '20px', width: '20px', backgroundColor: pixelColor, margin: '1px' }} />
 }
 
 function Pixels () {
@@ -24,11 +40,21 @@ function Pixels () {
   )
 }
 
-export default function PixelArt () {
+
+export default function PixelArt() {
+  const [color, setColor] = useState('green')
+
   return (
     <div>
+      {/* from code useState use this vars */}
+    <ColorContext.Provider value={{ color, setColor }}> 
       <ColorPicker />
       <Pixels />
+    </ColorContext.Provider>
     </div>
   )
 }
+
+
+// first step create an instance ColorContext
+// create edge tag like Context.Provider with attribute = value
