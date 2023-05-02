@@ -19,7 +19,7 @@ export default function DogPics () {
   return (
     <div className='dog-pics'>
       <img src={dogPic} />
-      <button onClick={async ev => setDogPic(await getDogPic()) }>🐶</button>
+      <button onClick={async (ev) => {console.log(ev.type); setDogPic(await getDogPic()) } }>🐶</button>
     </div>
   )
 }
