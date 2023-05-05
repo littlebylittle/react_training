@@ -35,3 +35,12 @@ So on the highest entry-point level: (index.js):
         <!-- Don't forget to owerwirte export of our reactCompnent by `connect` wrapper-->
 
 Don't forget to install in Chrome the `redux-devtools` extension
+
+So our storage calls-logic hierarchy would look like:
+    index.js
+        -> store.js
+            -> reducers.js
+                -> actions.js
+    
+    reactCompon1.js (export thorugh connecgt + provide properties in constroctor)
+    reactCompon2.js (export thorugh connecgt + provide properties in constroctor)
