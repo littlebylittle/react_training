@@ -5,7 +5,7 @@ import './NewTodoForm.css';
 
 const NewTodoForm = ({ todos, onCreatePressed }) => {
     const [inputValue, setInputValue] = useState('');
-
+    
     return (
         <div className="new-todo-form">
             <input
@@ -16,6 +16,8 @@ const NewTodoForm = ({ todos, onCreatePressed }) => {
                 onChange={e => setInputValue(e.target.value)} />
             <button
                 onClick={() => {
+                    // debugger;
+                    // console.log(todos, "xoxoxoxoxoxo")
                     const isDuplicateText =
                         todos.some(todo => todo.text === inputValue);
                     if (!isDuplicateText) {
@@ -29,6 +31,9 @@ const NewTodoForm = ({ todos, onCreatePressed }) => {
         </div>
     );
 };
+
+
+// below you will see a `connect` call through react-redux
 
 const mapStateToProps = state => ({
     todos: state.todos,
